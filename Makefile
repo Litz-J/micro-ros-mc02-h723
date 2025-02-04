@@ -100,7 +100,8 @@ Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
 Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c \
 Core/Src/sysmem.c \
-Core/Src/syscalls.c
+Core/Src/syscalls.c \
+Bsp/can/bsp_can.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -173,7 +174,10 @@ C_INCLUDES =  \
 -IMiddlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc \
 -IDrivers/CMSIS/Device/ST/STM32H7xx/Include \
 -IDrivers/CMSIS/Include \
--IMiddlewares/ST/ARM/DSP/Inc
+-IMiddlewares/ST/ARM/DSP/Inc \
+-IBsp \
+-IBsp/can
+
 
 
 
