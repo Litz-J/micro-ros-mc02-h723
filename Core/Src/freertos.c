@@ -179,7 +179,7 @@ void StartDefaultTask(void const * argument)
 
   rmw_uros_set_custom_transport(
     true,
-    (void *) &huart1,
+    (void *) &huart7,
     cubemx_transport_open,
     cubemx_transport_close,
     cubemx_transport_write,
@@ -209,7 +209,7 @@ void StartDefaultTask(void const * argument)
   rclc_support_init(&support, 0, NULL, &allocator);
 
   // create node
-  rclc_node_init_default(&node, "cubemx_node", "", &support);
+  rclc_node_init_default(&node, "mc02_node", "", &support);
 
   // create publisher
   rclc_publisher_init_default(
@@ -229,7 +229,7 @@ void StartDefaultTask(void const * argument)
     }
 
     msg.data++;
-    osDelay(10);
+    osDelay(1);
   }
   /* USER CODE END StartDefaultTask */
 }
